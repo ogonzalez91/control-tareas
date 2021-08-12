@@ -1,0 +1,36 @@
+<div class="container divPersonalizado">
+
+    <div class="break"></div>
+    <div class="row">
+        <div class="section">
+            <app-panel [muestraEliminar]="false" class="section" displayTitulo="Tareas sin catalogar"></app-panel>
+        </div>
+        <div class="section" *ngFor="let panel of panels">
+            <app-panel class="section" [displayTitulo]="panel.title">
+
+            </app-panel>
+        </div>
+    </div>
+    <div class="break"></div>
+    <br>
+    <div class="row">
+        <div class="section">
+            <app-mini-panel displayText="Agregar Nueva Tarea"></app-mini-panel>
+        </div>
+        <div class="section">
+            <!-- <app-mini-panel id="tbColumna" displayText="Agregar Nueva Columna"></app-mini-panel> -->
+            <label class="col-2 col-form-label" for="task-title">
+                <strong>Título</strong>
+            </label>
+
+            <input class="form-control" id="texto" #textoColumna type="text" />
+
+            <br>
+            <div class="input-group col">
+                <button type="button" (click)="newPanel(textoColumna.value)" class="btn btn-outline-primary btn-block">
+                    Agregar nueva columna
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

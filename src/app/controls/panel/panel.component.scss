@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    border: 1px solid blue;
+    box-shadow: 3px 3px 2px lightgray;
+    border-radius: 10%;
+}
+
+.btn-holder {
+    position: relative;
+    margin-top: 120%;
+}

@@ -1,0 +1,15 @@
+<div>
+    <label class="col-2 col-form-label" for="task-title">
+        <strong>Título</strong>
+    </label>
+
+    <input class="form-control" #textoColumna type="text" />
+
+    <br>
+    <div class="input-group col">
+        <button type="button" (click)="nuevoPanel.newPanel(textoColumna.value)" class="btn btn-outline-primary btn-block">
+            {{ displayText }}
+        </button>
+    </div>
+
+</div>
